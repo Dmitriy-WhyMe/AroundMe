@@ -1,5 +1,99 @@
 (function ($) {
 	$(document).ready(function () {
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			grabCursor: true,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			pagination: {
+				el: ".swiper-dots",
+				type: "fraction",
+				formatFractionCurrent: addZero,
+        		formatFractionTotal: addZero
+			}
+		});
+		var swiper_1 = new Swiper(".mySwiper_1", {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			grabCursor: true,
+			navigation: {
+				nextEl: ".swiper-button-next-1",
+				prevEl: ".swiper-button-prev-1",
+			},
+			pagination: {
+				el: ".swiper-dots-1",
+				type: "fraction",
+				formatFractionCurrent: addZero,
+        		formatFractionTotal: addZero
+			}
+		});
+		var swiper_2 = new Swiper(".mySwiper_2", {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			grabCursor: true,
+			navigation: {
+				nextEl: ".swiper-button-next-2",
+				prevEl: ".swiper-button-prev-2",
+			},
+			pagination: {
+				el: ".swiper-dots-2",
+				type: "fraction",
+				formatFractionCurrent: addZero,
+        		formatFractionTotal: addZero
+			}
+		});
+		var swiper_3 = new Swiper(".mySwiper_3", {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			grabCursor: true,
+			navigation: {
+				nextEl: ".swiper-button-next-3",
+				prevEl: ".swiper-button-prev-3",
+			},
+			pagination: {
+				el: ".swiper-dots-3",
+				type: "fraction",
+				formatFractionCurrent: addZero,
+        		formatFractionTotal: addZero
+			}
+		});
+		var swiper_4 = new Swiper(".mySwiper_4", {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			grabCursor: true,
+			navigation: {
+				nextEl: ".swiper-button-next-4",
+				prevEl: ".swiper-button-prev-4",
+			},
+			pagination: {
+				el: ".swiper-dots-4",
+				type: "fraction",
+				formatFractionCurrent: addZero,
+        		formatFractionTotal: addZero
+			}
+		});
+		var swiper_5 = new Swiper(".mySwiper_5", {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			grabCursor: true,
+			navigation: {
+				nextEl: ".swiper-button-next-5",
+				prevEl: ".swiper-button-prev-5",
+			},
+			pagination: {
+				el: ".swiper-dots-5",
+				type: "fraction",
+				formatFractionCurrent: addZero,
+        		formatFractionTotal: addZero
+			}
+		});
+		function addZero(num){
+			return (num > 9) ? num : '0' + num;
+		}
+
 		var mySlider = $('.full-page--vertical');
 
 		mySlider.slick({
@@ -23,6 +117,10 @@
 			var summ = currentSlide + 1;
 			$( ".index-slider" ).html('0'+ summ);
 		});
+		var allCurrentSlide = $(".full-page--vertical").slick("getSlick").slideCount
+		$( ".all-slider" ).html('0'+ allCurrentSlide);
+
+		
 		
 	});
 })(jQuery);
