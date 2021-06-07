@@ -56,12 +56,7 @@ body
 	bottom: -60px
 	height: 50px
 	left: 42.5%
-	.swiper-button-next-5, .swiper-button-prev-5,
-	.swiper-button-next-4, .swiper-button-prev-4,
-	.swiper-button-next-3, .swiper-button-prev-3,
-	.swiper-button-next-2, .swiper-button-prev-2,
-	.swiper-button-next-1, .swiper-button-prev-1,
-	.swiper-button-next, .swiper-button-prev, 
+	div
 		cursor: pointer
 		position: relative
 		background: $gray
@@ -75,51 +70,27 @@ body
 		align-items: center
 		justify-content: center
 		margin-top: calc(0px - (var(--swiper-navigation-size)/ 2))
-	.swiper-button-next-5:after, .swiper-button-prev-5:after,
-	.swiper-button-next-4:after, .swiper-button-prev-4:after,
-	.swiper-button-next-3:after, .swiper-button-prev-3:after,
-	.swiper-button-next-2:after, .swiper-button-prev-2:after,
-	.swiper-button-next-1:after, .swiper-button-prev-1:after,
-	.swiper-button-next:after, .swiper-button-prev:after
-		font-size: 15px
-		font-variant: initial
-		line-height: 1
-		text-transform: none!important
-		letter-spacing: 0
-		font-family: swiper-icons
-	.swiper-button-prev-5:after, .swiper-container-rtl .swiper-button-next-5:after,
-	.swiper-button-prev-4:after, .swiper-container-rtl .swiper-button-next-4:after,
-	.swiper-button-prev-3:after, .swiper-container-rtl .swiper-button-next-3:after,
-	.swiper-button-prev-2:after, .swiper-container-rtl .swiper-button-next-2:after,
-	.swiper-button-prev-1:after, .swiper-container-rtl .swiper-button-next-1:after
-		content: 'prev'
-	.swiper-button-next-5:after, .swiper-container-rtl .swiper-button-prev-5:after,
-	.swiper-button-next-4:after, .swiper-container-rtl .swiper-button-prev-4:after,
-	.swiper-button-next-3:after, .swiper-container-rtl .swiper-button-prev-3:after,
-	.swiper-button-next-2:after, .swiper-container-rtl .swiper-button-prev-2:after,
-	.swiper-button-next-1:after, .swiper-container-rtl .swiper-button-prev-1:after
-		content: 'next'
-	.swiper-button-next-5.swiper-button-disabled, .swiper-button-prev-5.swiper-button-disabled,
-	.swiper-button-next-4.swiper-button-disabled, .swiper-button-prev-4.swiper-button-disabled,
-	.swiper-button-next-3.swiper-button-disabled, .swiper-button-prev-3.swiper-button-disabled,
-	.swiper-button-next-2.swiper-button-disabled, .swiper-button-prev-2.swiper-button-disabled,
-	.swiper-button-next-1.swiper-button-disabled, .swiper-button-prev-1.swiper-button-disabled
+		&:after
+			font-size: 15px
+			font-variant: initial
+			line-height: 1
+			text-transform: none!important
+			letter-spacing: 0
+			font-family: swiper-icons
+	div:first-child
+		&:after
+			content: 'prev'
+	div:last-child
+		&:after
+			content: 'next'
+	div.swiper-button-disabled
 		opacity: .35
 		cursor: auto
 		pointer-events: none
-	.swiper-button-prev-5, .swiper-container-rtl .swiper-button-next-5,
-	.swiper-button-prev-4, .swiper-container-rtl .swiper-button-next-4,
-	.swiper-button-prev-3, .swiper-container-rtl .swiper-button-next-3,
-	.swiper-button-prev-2, .swiper-container-rtl .swiper-button-next-2,
-	.swiper-button-prev-1, .swiper-container-rtl .swiper-button-next-1
+	div:first-child, .swiper-container-rtl div:last-child
 		left: 10px
 		right: auto
-	.swiper-button-next-5, .swiper-container-rtl .swiper-button-prev-5,
-	.swiper-button-next-4, .swiper-container-rtl .swiper-button-prev-4,
-	.swiper-button-next-3, .swiper-container-rtl .swiper-button-prev-3,
-	.swiper-button-next-2, .swiper-container-rtl .swiper-button-prev-2,
-	.swiper-button-next-1, .swiper-container-rtl .swiper-button-prev-1,
-	.swiper-button-next, .swiper-container-rtl .swiper-button-prev
+	div:last-child, .swiper-container-rtl div:first-child
 		right: 10px
     	left: auto
 	
